@@ -4,8 +4,8 @@ const Display = (props) => {
 
   return (
     <>
-      <p>Balls: {props.balls}</p>
-      <p>Strikes: {props.strikes}</p>
+      <p data-testid='ballsCount2'>{props.balls}</p>
+      <p data-testid='strikesCount'>Strikes: {props.strikes}</p>
     </>
   )
 }
