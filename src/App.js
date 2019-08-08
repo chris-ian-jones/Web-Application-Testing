@@ -40,7 +40,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Display balls={this.state.balls} strikes={this.state.strikes}/>
-        <p data-testid='ballsCount'>{this.state.balls}</p>
+        {/* <p data-testid='ballsCount'>{this.state.balls}</p> */}
         <Dashboard 
           recordStrike={this.recordStrike}
           recordBall={this.recordBall}
