@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-import { render, cleanup, fireEvent, waitForElement, getByTestId } from '@testing-library/react'
+import { render, fireEvent, getByTestId } from '@testing-library/react'
 import '@testing-library/react/cleanup-after-each'
 
 
@@ -22,6 +22,7 @@ it('increments count of balls on click of ball function', () => {
   fireEvent.click(getByTestId('ball'))
   expect(getByTestId('ballsCount').textContent).toBe('1')
 })
+
 
 
 

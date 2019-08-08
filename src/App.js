@@ -14,26 +14,69 @@ class App extends React.Component {
 
   // method to record a strike
   recordStrike = () => {
-    this.setState({ strikes: (this.state.strikes + 1) })
-    this.setState({ balls: (this.state.balls + 1) })
+    if (this.state.balls === 3) {
+      this.setState({ 
+        balls: (this.state.balls = 0),
+        strikes: (this.state.strikes = 0),
+      }) 
+    } else if (this.state.strikes === 2) {
+      this.setState({ 
+        strikes: (this.state.strikes = 0) ,
+        balls: (this.state.balls = 0)
+      }) 
+    } else {
+      this.setState({ 
+        strikes: (this.state.strikes + 1) ,
+        balls: (this.state.balls + 1)
+      })
+    }
   }
 
   // method to record a ball
   recordBall = () => {
-    this.setState({ strikes: (this.state.strikes + 1) })
-    this.setState({ balls: (this.state.balls + 1) })
+    if (this.state.balls === 3) {
+      this.setState({ 
+        strikes: (this.state.strikes = 0),
+        balls: (this.state.balls = 0) 
+      })
+    } else {
+      this.setState({ 
+        // strikes: (this.state.strikes + 1),
+        balls: (this.state.balls + 1) 
+      })
+    }
   }
 
   // method to record a foul
   recordFoul = () => {
-    this.setState({ strikes: (this.state.strikes + 1) })
-    this.setState({ balls: (this.state.balls + 1) })
+    if (this.state.balls === 3) {
+      this.setState({ 
+        balls: (this.state.balls = 0),
+        strikes: (this.state.strikes = 0),
+      }) 
+    } else if (this.state.strikes === 0) {
+      this.setState({ 
+        balls: (this.state.balls + 1),
+        strikes: (this.state.strikes = 1)
+      }) 
+    } else if (this.state.strikes = 2) {
+      this.setState({ 
+        balls: (this.state.balls + 1)
+      }) 
+    } else { 
+      this.setState({ 
+        strikes: (this.state.strikes = 2),
+        balls: (this.state.balls + 1)
+      })
+    }
   }
 
   // method to record a hit
   recordHit = () => {
-    this.setState({ strikes: (this.state.strikes + 1) })
-    this.setState({ balls: (this.state.balls + 1) })
+    this.setState({ 
+      strikes: (this.state.strikes = 0 ),
+      balls: (this.state.balls = 0)
+    })
   }
   
   render() {
