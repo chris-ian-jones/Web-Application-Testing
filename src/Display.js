@@ -1,13 +1,12 @@
 import React from 'react'
 
-const Display = (props) => {
-
+const Display = ({ balls, strikes }) => {
   return (
     <>
       <p>Balls:</p>
-      <p data-testid='ballsCount'>{props.balls}</p>
+      <p data-testid='ballsCount'>{balls}</p>
       <p>Strikes:</p>
-      <p data-testid='strikesCount'>{props.strikes}</p>
+      <p data-testid='strikesCount'>{strikes}</p>
     </>
   )
 }

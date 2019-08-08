@@ -41,7 +41,6 @@ class App extends React.Component {
       })
     } else {
       this.setState({ 
-        // strikes: (this.state.strikes + 1),
         balls: (this.state.balls + 1) 
       })
     }
@@ -83,7 +82,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <Display balls={this.state.balls} strikes={this.state.strikes}/>
-        {/* <p data-testid='ballsCount'>{this.state.balls}</p> */}
         <Dashboard 
           recordStrike={this.recordStrike}
           recordBall={this.recordBall}

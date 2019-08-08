@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Dashboard = (props) => {
+const Dashboard = ({ recordStrike, recordBall, recordFoul, recordHit }) => {
   return (
     <>
-      <button data-testid = 'strike' onClick={props.recordStrike}>Strike</button>
-      <button data-testid = 'ball' onClick={props.recordBall}>Ball</button>
-      <button data-testid = 'foul' onClick={props.recordFoul}>Foul</button>
-      <button data-testid = 'hit' onClick={props.recordHit}>Hit</button>
+      <button data-testid = 'strike' onClick={recordStrike}>Strike</button>
+      <button data-testid = 'ball' onClick={recordBall}>Ball</button>
+      <button data-testid = 'foul' onClick={recordFoul}>Foul</button>
+      <button data-testid = 'hit' onClick={recordHit}>Hit</button>
     </>
   )
 }
